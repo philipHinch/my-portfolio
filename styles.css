@@ -6,6 +6,19 @@
   box-sizing: border-box;
 }
 
+/* work-in-progress */
+
+.work-in-progress {
+  position: absolute;
+  bottom: 20px;
+  right: 50px;
+}
+
+.work-in-progress i {
+  margin-right: 5px;
+  color: var(--orange);
+}
+
 a {
   text-decoration: none;
 }

@@ -1,0 +1,361 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  color: #ccc;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+:root {
+  --dark-grey: #232526;
+  --grey: #4f5253;
+  --light-grey: #666;
+  --very-light-grey: #ccc;
+  --orange: #ed8e26;
+}
+
+.active {
+  color: var(--orange);
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  background-image: linear-gradient(
+    to right bottom,
+    #232526,
+    #2d3031,
+    #383b3c,
+    #434647,
+    #4f5253
+  );
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  background-color: #e5e5f7;
+  opacity: 0.8;
+  background-image: repeating-radial-gradient(
+      circle at 0 0,
+      transparent 0,
+      #383b3c 10px
+    ),
+    repeating-linear-gradient(#232526, #4f5253);
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--dark-grey);
+  border-right: var(--orange) 2px solid;
+  width: 100px;
+}
+
+/* logo */
+
+.logo {
+  width: 100%;
+  height: 100px;
+  padding: 5px;
+  background-color: var(--orange);
+  border-bottom: var(--orange) 2px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s ease-in;
+}
+
+.logo svg {
+  width: 100%;
+}
+
+.logo svg path#code {
+  transition: 0.2s ease-in;
+}
+
+.logo:hover svg path#code {
+  fill: var(--orange);
+}
+
+.logo:hover {
+  background-color: var(--very-light-grey);
+}
+
+/* main-nav-bar */
+
+.main-nav-bar {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-nav-bar a i {
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: center;
+  margin: 16px 0;
+  transition: color 0.2s ease-in;
+}
+
+.main-nav-bar a i:hover {
+  color: var(--orange);
+}
+
+/* secondary-nav-bar */
+
+.secondary-nav-bar {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px;
+}
+
+.secondary-nav-bar a i {
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+  transition: color 0.2s ease-in;
+}
+
+.secondary-nav-bar a i:hover {
+  color: var(--orange);
+}
+
+/* main */
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+section.container {
+  width: 90%;
+  height: 600px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  /* border: 2px solid var(--very-light-grey); */
+}
+
+section .main-text {
+  width: 50%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid var(--orange);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+section.container .main-text h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  display: inline;
+  margin-left: 18%;
+}
+
+section.container .main-image {
+  width: 50%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--orange);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+/* mode */
+
+.mode {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mode-text {
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 19px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--orange);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: var(--orange);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--orange);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  transform: translateX(20px);
+  background-color: var(--very-light-grey);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* date */
+
+.date {
+  position: absolute;
+  top: 2%;
+  right: 3%;
+}
+
+.date .day,
+.month,
+.year {
+  color: var(--very-light-grey);
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+/* time */
+
+.time {
+  position: absolute;
+  top: 5%;
+  right: 3%;
+  border: 2px solid var(--very-light-grey);
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
+.time .hour,
+.min,
+.sec,
+.colon {
+  color: var(--orange);
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.colon {
+  animation: colonBeep 1s infinite;
+}
+
+@keyframes colonBeep {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* media-queries */
+
+@media (max-width: 900px) {
+  section.container {
+    flex-direction: column;
+    width: 100%;
+  }
+  section.container .main-text {
+    width: 400px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0px;
+  }
+
+  section.container .main-image {
+    width: 400px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 0px;
+  }
+  section.container .main-text h1 {
+    font-size: 2.5rem;
+  }
+
+  section.container .main-image svg {
+    width: 200px;
+  }
+  .mode {
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 500px) {
+  section.container {
+  }
+  section.container .main-text {
+    width: 300px;
+  }
+
+  section.container .main-image {
+    width: 300px;
+  }
+}

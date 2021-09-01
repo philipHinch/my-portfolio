@@ -29,16 +29,7 @@ a {
   --light-grey: #666;
   --very-light-grey: #ccc;
   --orange: #ed8e26;
-}
-
-/* utility classes */
-
-.active {
-  color: var(--orange);
-}
-
-.not-active {
-  color: var(--very-light-grey);
+  --white: #ffffff;
 }
 
 body {
@@ -67,7 +58,8 @@ body::after {
     repeating-linear-gradient(#232526, #4f5253);
   width: 100vw;
   height: 100vh;
-  z-index: -1;
+  z-index: -2;
+  visibility: visible;
 }
 
 .header {
@@ -153,11 +145,36 @@ body::after {
 /* main */
 
 main {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
+}
+
+/* light div */
+
+.light-div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: #e5e5f7;
+  opacity: 1;
+  background-image: repeating-radial-gradient(
+      circle at 0 0,
+      transparent 0,
+      var(--very-light-grey) 10px
+    ),
+    repeating-linear-gradient(var(--very-light-grey), var(--white));
+  visibility: hidden;
+}
+
+.visibility {
+  visibility: visible;
 }
 
 section.container {
@@ -238,7 +255,7 @@ section.container .main-image {
   background-color: var(--very-light-grey);
   color: var(--dark-grey);
   cursor: pointer;
-  transition: 0.2s ease-in;
+  transition: background-color 0.2s ease-in;
 }
 
 .view-projects-btn {
@@ -350,7 +367,7 @@ input:checked + .slider:before {
   right: 3%;
 }
 
-.date .day,
+.day,
 .month,
 .year {
   color: var(--very-light-grey);
@@ -362,14 +379,14 @@ input:checked + .slider:before {
 
 .time {
   position: absolute;
-  top: 5%;
+  top: 6%;
   right: 3.8%;
   border: 2px solid var(--very-light-grey);
   border-radius: 10px;
-  padding: 5px 10px;
+  padding: 5px 12px;
 }
 
-.time .hour,
+.hour,
 .min,
 .sec,
 .colon {
@@ -380,6 +397,34 @@ input:checked + .slider:before {
 
 .colon {
   animation: colonBeep 1s infinite;
+}
+
+/* utility classes */
+
+.not-active {
+  color: var(--very-light-grey);
+}
+
+.active {
+  color: var(--orange);
+}
+
+.light-color {
+  color: var(--very-light-grey);
+}
+
+.dark-color {
+  color: var(--dark-grey);
+  border-color: var(--dark-grey);
+}
+
+.dark-back {
+  background-color: var(--dark-grey);
+  color: var(--very-light-grey);
+}
+
+.transparent-back {
+  background-color: transparent;
 }
 
 @keyframes colonBeep {

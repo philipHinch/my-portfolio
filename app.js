@@ -1,4 +1,4 @@
-//VARIABLES
+//DATE VARIABLES
 let dayUI = document.querySelector('.day');
 let monthUI = document.querySelector('.month');
 let yearUI = document.querySelector('.year');
@@ -8,6 +8,11 @@ let secUI = document.querySelector('.sec');
 let colonUI = document.querySelector('.colon');
 let dateUI = document.querySelector('.date');
 let timeUI = document.querySelector('.time');
+
+//UI VARIABLES
+
+const toggleMode = document.getElementById('toggle-mode');
+const modeText = document.querySelector('.dark-mode-active');
 
 //FUNCTIONS
 function getTime() {

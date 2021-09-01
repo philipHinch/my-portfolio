@@ -171,6 +171,7 @@ section.container {
 }
 
 section .main-text {
+  position: relative;
   width: 50%;
   height: 50%;
   display: flex;
@@ -192,6 +193,24 @@ section.container .main-text h1 {
   margin-left: 18%;
 }
 
+/* small code tag decoration */
+
+section.container .main-text h1.start {
+  font-size: 1rem;
+  color: var(--light-grey);
+  position: absolute;
+  top: 5%;
+  left: -10%;
+}
+
+section.container .main-text h1.ending {
+  font-size: 1rem;
+  color: var(--light-grey);
+  position: absolute;
+  right: 20%;
+  bottom: 2%;
+}
+
 section.container .main-image {
   width: 50%;
   height: 50%;
@@ -204,6 +223,44 @@ section.container .main-image {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+/* buttons */
+
+.btn {
+  padding: 15px 40px;
+  margin-right: -7px;
+  width: 220px;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  font-family: inherit;
+  border: 2px solid var(--orange);
+  background-color: var(--very-light-grey);
+  color: var(--dark-grey);
+  cursor: pointer;
+  transition: 0.2s ease-in;
+}
+
+.view-projects-btn {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: var(--orange);
+}
+
+.contact-me-btn {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: transparent;
+  color: var(--very-light-grey);
+}
+
+.view-projects-btn:hover {
+  background-color: var(--very-light-grey);
+}
+
+.contact-me-btn:hover {
+  background-color: var(--very-light-grey);
+  color: var(--dark-grey);
 }
 
 /* mode */
@@ -365,11 +422,50 @@ input:checked + .slider:before {
   .mode {
     margin: 20px 0;
   }
+
+  /* buttons */
+
+  .btn {
+    padding: 15px 20px;
+    margin-right: -px;
+    margin-top: 40px;
+    width: 160px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-family: inherit;
+    border: 2px solid var(--orange);
+    background-color: var(--very-light-grey);
+    color: var(--dark-grey);
+    cursor: pointer;
+    transition: 0.2s ease-in;
+  }
+
+  .view-projects-btn {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: var(--orange);
+  }
+
+  .contact-me-btn {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: transparent;
+    color: var(--very-light-grey);
+  }
+
+  .view-projects-btn:hover {
+    background-color: var(--very-light-grey);
+  }
+
+  .contact-me-btn:hover {
+    background-color: var(--very-light-grey);
+    color: var(--dark-grey);
+  }
 }
 
 @media (max-width: 500px) {
   section.container {
-    margin-bottom: 140px;
+    margin-bottom: 20px;
   }
   section.container .main-text {
     width: 280px;
@@ -393,5 +489,13 @@ input:checked + .slider:before {
 
   .time {
     opacity: 0;
+  }
+
+  /* buttons */
+
+  .btn {
+    width: 140px;
+    padding: 15px 10px;
+    margin-bottom: 80px;
   }
 }

@@ -17,6 +17,7 @@ const lightDiv = document.querySelector('.light-div');
 let h1 = document.querySelectorAll('h1');
 const contactBtn = document.querySelector('.contact-me-btn');
 const timeBox = document.querySelector('.time');
+const workInProgress = document.querySelector('.work-in-progress');
 
 //EVENT LISTENERS
 
@@ -33,6 +34,9 @@ toggleMode.addEventListener('click', () => {
     contactBtn.classList.toggle('dark-color');
     //change time border color
     timeBox.classList.toggle('dark-color')
+    //change work in progress color
+    workInProgress.classList.toggle('dark-color');
+
 
     //CHANGE BUTTON BACKGROUND ON HOVER IN LIGHT MODE
 

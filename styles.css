@@ -11,12 +11,12 @@
 .work-in-progress {
   position: absolute;
   bottom: 20px;
-  right: 50px;
+  right: 85px;
 }
 
 .work-in-progress i {
   margin-right: 5px;
-  color: var(--orange);
+  color: var(--very-light-grey);
 }
 
 a {
@@ -31,8 +31,14 @@ a {
   --orange: #ed8e26;
 }
 
+/* utility classes */
+
 .active {
   color: var(--orange);
+}
+
+.not-active {
+  color: var(--very-light-grey);
 }
 
 body {
@@ -291,7 +297,7 @@ input:checked + .slider:before {
 .month,
 .year {
   color: var(--very-light-grey);
-  letter-spacing: 1px;
+  letter-spacing: 3px;
   font-weight: bold;
 }
 
@@ -300,7 +306,7 @@ input:checked + .slider:before {
 .time {
   position: absolute;
   top: 5%;
-  right: 3%;
+  right: 3.8%;
   border: 2px solid var(--very-light-grey);
   border-radius: 10px;
   padding: 5px 10px;
@@ -311,7 +317,7 @@ input:checked + .slider:before {
 .sec,
 .colon {
   color: var(--orange);
-  letter-spacing: 1px;
+  letter-spacing: 3px;
   font-weight: bold;
 }
 
@@ -357,18 +363,35 @@ input:checked + .slider:before {
     width: 200px;
   }
   .mode {
-    margin-bottom: 60px;
+    margin: 20px 0;
   }
 }
 
 @media (max-width: 500px) {
   section.container {
+    margin-bottom: 140px;
   }
   section.container .main-text {
-    width: 300px;
+    width: 280px;
+  }
+
+  section.container .main-text h1 {
+    font-size: 1.5rem;
   }
 
   section.container .main-image {
-    width: 300px;
+    width: 280px;
+  }
+
+  section.container .main-image svg {
+    width: 150px;
+  }
+
+  .date {
+    opacity: 0;
+  }
+
+  .time {
+    opacity: 0;
   }
 }

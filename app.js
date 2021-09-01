@@ -25,11 +25,13 @@ function getTime() {
     sec = sec < 10 ? '0' + sec : sec;
 
     dateUI.innerHTML = `
-        <span class="day">${ day }/</span><span class="month">${ month }/</span><span class="year">${ year }</span>
+        <span class="day">${ day } <span class="active">/</span>
+        </span><span class="month">${ month } <span class="active">/</span>
+        </span><span class="year">${ year }</span>
     `;
 
     timeUI.innerHTML = `
-        <span class="hour">${ hour }:</span><span class="min">${ min }</span><span class="colon">:</span><span class="sec">${ sec }</span>
+        <span class="hour">${ hour }<span class="not-active">:</span></span><span class="min">${ min }</span><span class="colon"><span class="not-active">:</span></span><span class="sec">${ sec }</span>
     `;
 };
 

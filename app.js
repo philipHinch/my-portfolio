@@ -9,7 +9,7 @@
 let dateUI = document.querySelector('.date');
 let timeUI = document.querySelector('.time');
 
-//UI VARIABLES
+//UI VARIABLES --------------------------------------
 
 const toggleMode = document.getElementById('toggle-mode');
 const modeText = document.querySelector('.mode-text');
@@ -18,9 +18,15 @@ let h1 = document.querySelectorAll('h1');
 const contactBtn = document.querySelector('.contact-me-btn');
 const timeBox = document.querySelector('.time');
 const workInProgress = document.querySelector('.work-in-progress');
+const mainMenuLinks = document.querySelectorAll('.menu-item');
+const mainNavBar = document.querySelector('.main-nav-bar');
+const aboutTextH2 = document.querySelector('.about-text-h2');
+const aboutText = document.querySelector('.about-text');
 
-//EVENT LISTENERS
 
+//EVENT LISTENERS ----------------------------------
+
+//toggle light/dark modes
 toggleMode.addEventListener('click', () => {
     //toggle visibility class name
     lightDiv.classList.toggle('visibility');
@@ -34,8 +40,11 @@ toggleMode.addEventListener('click', () => {
     contactBtn.classList.toggle('dark-color');
     //change time border color
     timeBox.classList.toggle('dark-color')
-    //change work in progress color
-    workInProgress.classList.toggle('dark-color');
+    // //change work in progress color
+    // workInProgress.classList.toggle('dark-color');
+    //change about text color
+    aboutTextH2.classList.toggle('dark-color');
+    aboutText.classList.toggle('dark-color');
 
 
     //CHANGE BUTTON BACKGROUND ON HOVER IN LIGHT MODE
@@ -43,7 +52,7 @@ toggleMode.addEventListener('click', () => {
 
 })
 
-
+//FUNCTIONS
 
 
 //TIME & DATE FUNCTIONS

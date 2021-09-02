@@ -10,8 +10,9 @@
 
 .work-in-progress {
   position: absolute;
-  bottom: 20px;
-  right: 85px;
+  bottom: 10px;
+  left: 5px;
+  font-size: 0.6rem;
 }
 
 .work-in-progress i {
@@ -32,9 +33,13 @@ a {
   --white: #ffffff;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   display: flex;
-  height: 100vh;
+  height: 100%;
   background-image: linear-gradient(
     to right bottom,
     #232526,
@@ -427,6 +432,47 @@ input:checked + .slider:before {
   background-color: transparent;
 }
 
+/* ABOUT PAGE  */
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  margin-top: 60px;
+}
+
+.avatar-container {
+  width: 280px;
+  margin-bottom: 60px;
+}
+
+.avatar-container img {
+  width: 100%;
+  border: 2px solid var(--orange);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.about-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.about-text-h2 {
+  font-size: 2rem;
+  color: var(--orange);
+}
+
+.about-text {
+  margin-top: 50px;
+  font-size: 1.3rem;
+}
+
 @keyframes colonBeep {
   0% {
     opacity: 1;
@@ -468,7 +514,7 @@ input:checked + .slider:before {
     margin: 20px 0;
   }
 
-  /* buttons */
+  /* media buttons */
 
   .btn {
     padding: 15px 20px;
@@ -502,6 +548,27 @@ input:checked + .slider:before {
     background-color: var(--very-light-grey);
     color: var(--dark-grey);
   }
+
+  /* media about */
+
+  .about-container {
+    width: 80%;
+    margin-top: 40px;
+  }
+
+  .avatar-container {
+    width: 200px;
+    margin-bottom: 40px;
+  }
+
+  .about-text-h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-text {
+    margin-top: 50px;
+    font-size: 1.1rem;
+  }
 }
 
 @media (max-width: 500px) {
@@ -532,11 +599,36 @@ input:checked + .slider:before {
     opacity: 0;
   }
 
-  /* buttons */
+  /* media buttons */
 
   .btn {
-    width: 140px;
+    width: 120px;
     padding: 15px 10px;
-    margin-bottom: 80px;
+    margin-bottom: 20px;
+    font-size: 0.8rem;
+  }
+
+  /* media about */
+
+  .about-container {
+    width: 90%;
+    margin-top: 0px;
+  }
+
+  .avatar-container {
+    width: 120px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .about-text-h2 {
+    font-size: 1.2rem;
+    color: var(--orange);
+  }
+
+  .about-text {
+    margin-top: 10px;
+    margin-bottom: -90px;
+    font-size: 1rem;
   }
 }

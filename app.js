@@ -47,6 +47,7 @@ toggleMode.addEventListener('click', () => {
     aboutText.classList.toggle('dark-color');
 
 
+
     //CHANGE BUTTON BACKGROUND ON HOVER IN LIGHT MODE
 
 

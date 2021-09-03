@@ -432,6 +432,14 @@ input:checked + .slider:before {
   background-color: transparent;
 }
 
+small {
+  color: var(--dark-grey);
+}
+
+ul li {
+  color: var(--dark-grey);
+}
+
 /* ABOUT PAGE  */
 
 .about-container {
@@ -471,6 +479,165 @@ input:checked + .slider:before {
 .about-text {
   margin-top: 50px;
   font-size: 1.3rem;
+}
+
+/* PROJECTS PAGE */
+
+section.projects-container {
+  width: 80%;
+  margin: 50px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-title {
+  margin: 50px auto;
+  font-size: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+  max-width: 100%;
+}
+
+.grid .project {
+  aspect-ratio: 1/1;
+  overflow: auto;
+  background-color: var(--orange);
+  border: 2px solid var(--orange);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.grid .project a {
+  padding: 10px 20px;
+  width: 150px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.project-text-div {
+  margin: auto;
+}
+
+.project-text {
+  color: var(--dark-grey);
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+/* project images */
+
+.project0-image {
+  background: url("/images/projectimages/pokemon.png") no-repeat center
+    center/cover;
+  height: 80%;
+}
+
+.project1-image {
+  background: url("/images/projectimages/digitalclockthumb.png") no-repeat
+    center center/cover;
+  height: 80%;
+}
+
+.project2-image {
+  background: url("/images/projectimages/weather.png") no-repeat center
+    center/cover;
+  height: 80%;
+}
+
+.project3-image {
+  background: url("/images/projectimages/gym.png") no-repeat center center/cover;
+  height: 80%;
+}
+
+.project4-image {
+  background: url("/images/projectimages/shoppinglist.png") no-repeat center
+    center/cover;
+  height: 80%;
+}
+
+.project5-image {
+  background: url("/images/projectimages/savoury.png") no-repeat center
+    center/cover;
+  height: 80%;
+}
+
+.project6-image {
+  background: url("/images/projectimages/quizgame.png") no-repeat center
+    center/cover;
+  height: 80%;
+}
+
+.project7-image {
+  background: url("/images/projectimages/gradientgenerator.png") no-repeat
+    center center/cover;
+  height: 80%;
+}
+
+.project8-image {
+  background: url("/images/projectimages/coolloginform.png") no-repeat center
+    center/cover;
+  height: 80%;
+}
+
+.github-repo1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  z-index: 4;
+}
+
+.project-link1 {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  z-index: 4;
+}
+
+.project:hover .pseudo {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.7;
+  height: 100%;
+  width: 100%;
+}
+
+.project:hover .github-repo1 {
+  opacity: 1;
+  border-radius: 10px;
+  z-index: 100;
+}
+
+.project:hover .project-link1 {
+  opacity: 1;
+  border-radius: 10px;
+  z-index: 100;
+}
+
+.github-repo1:hover {
+  border-color: var(--dark-grey);
+  background-color: var(--orange);
+}
+
+.project-link1:hover {
+  border-color: var(--dark-grey);
+  background-color: var(--orange);
+}
+
+.hidden {
+  opacity: 0;
 }
 
 @keyframes colonBeep {
@@ -569,6 +736,27 @@ input:checked + .slider:before {
     margin-top: 50px;
     font-size: 1.1rem;
   }
+
+  /* projects */
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    max-width: 100%;
+    margin-bottom: -50px;
+  }
+
+  .grid .project {
+    aspect-ratio: 1/1;
+    overflow: auto;
+    background-color: var(--orange);
+    border: 2px solid var(--orange);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
 }
 
 @media (max-width: 500px) {
@@ -630,5 +818,67 @@ input:checked + .slider:before {
     margin-top: 10px;
     margin-bottom: -90px;
     font-size: 1rem;
+  }
+
+  /* projects */
+
+  section.projects-container {
+    margin: -50px 0 30px;
+  }
+
+  .project-title {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+  }
+
+  .project-text {
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+
+  .project small {
+    font-size: 0.8rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+    max-width: 100%;
+    margin-bottom: -50px;
+  }
+
+  .grid .project {
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    background-color: var(--orange);
+    border: 2px solid var(--orange);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .grid .project a {
+    padding: 10px 15px;
+    width: 100px;
+    font-size: 0.7rem;
+    font-family: inherit;
+  }
+
+  .github-repo1 {
+    top: 18%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    z-index: 4;
+  }
+
+  .project-link1 {
+    top: -30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    z-index: 4;
   }
 }

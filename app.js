@@ -22,6 +22,7 @@ const mainMenuLinks = document.querySelectorAll('.menu-item');
 const mainNavBar = document.querySelector('.main-nav-bar');
 const aboutTextH2 = document.querySelector('.about-text-h2');
 const aboutText = document.querySelector('.about-text');
+const color = document.querySelectorAll('.color');
 
 
 //EVENT LISTENERS ----------------------------------
@@ -52,6 +53,18 @@ toggleMode.addEventListener('click', () => {
 
 
 })
+
+
+color.forEach((color) => {
+    color.addEventListener('click', () => {
+        if (document.querySelector('.alert')) {
+            return
+        } else {
+            showAlert('Color Selected');
+        }
+    })
+});
+
 
 //FUNCTIONS
 
@@ -95,6 +108,19 @@ function getTime() {
 
 
 };
+
+// ALERT FUNCTION
+
+function showAlert(message) {
+    let colorAlertDiv = document.querySelector('.color-alert');
+    let alertDiv = document.createElement('div');
+    alertDiv.className = 'alert active';
+    alertDiv.textContent = message;
+    colorAlertDiv.appendChild(alertDiv);
+    setTimeout(() => {
+        document.querySelector('.alert').remove()
+    }, 3000)
+}
 
 setInterval(function () {
     getTime();

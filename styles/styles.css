@@ -881,4 +881,12 @@ section.projects-container {
     width: 80%;
     z-index: 4;
   }
+
+  small {
+    display: none;
+  }
+
+  ul li {
+    display: none;
+  }
 }

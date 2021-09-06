@@ -16,10 +16,18 @@ const mainNavBar = document.querySelector('.main-nav-bar');
 const aboutTextH2 = document.querySelector('.about-text-h2');
 const aboutText = document.querySelector('.about-text');
 const aboutEmail = document.querySelector('.about-email');
+const header = document.querySelector('header');
+//color variables
+let colorAlertDiv = document.querySelector('.color-alert');
 const color = document.querySelectorAll('.color');
 const activeColor = document.querySelectorAll('.active');
+let logo = document.querySelector('.logo');
+let mainImage = document.querySelector('.main-image');
+let mainSvg = document.querySelector('.main-image svg');
 let chosenColor;
 let mode;
+//create alert div
+let alertDiv = document.createElement('div');
 
 
 //EVENT LISTENERS --------------------------------------------------------------------------
@@ -97,11 +105,10 @@ color.forEach((color) => {
         if (document.querySelector('.alert')) {
             return
         } else {
-            showAlert('Color Selected');
+            //showAlert('Color Selected');
         }
         chosenColor = color.textContent;
         setColor('color', color);
-        return chosenColor;
     })
 });
 
@@ -157,9 +164,9 @@ setInterval(function () {
 
 // alert function
 function showAlert(message) {
-    let colorAlertDiv = document.querySelector('.color-alert');
-    let alertDiv = document.createElement('div');
-    alertDiv.className = 'alert active';
+
+    alertDiv.className = 'alert';
+    alertDiv.style.color = localStorage.getItem('color');
     alertDiv.textContent = message;
     colorAlertDiv.appendChild(alertDiv);
     setTimeout(() => {
@@ -184,10 +191,62 @@ function setColor() {
     updatePortfolioColor()
 };
 
+
+// test orange:#ed8e26 blue:#2a9d8f green:#b1e84a pink:#ff87ab
+
+
 function updatePortfolioColor() {
     activeColor.forEach((color) => {
         color.style.color = chosenColor;
     })
+    if (chosenColor === '#2a9d8f') {
+        logo.classList.remove('orange-background-color', 'green-background-color', 'pink-background-color');
+        logo.classList.add('blue-background-color');
+        logo.classList.remove('orange-border-bottom', 'green-border-bottom', 'pink-border-bottom');
+        logo.classList.add('blue-border-bottom');
+        header.classList.remove('orange-border-right', 'green-border-right', 'pink-border-right');
+        header.classList.add('blue-border-right');
+        mainSvg.classList.add('transparent');
+        mainImage.classList.remove('orange-background-image');
+        mainImage.classList.add('blue-background-image');
+    } else if (chosenColor === '#ed8e26') {
+        logo.classList.remove('blue-background-color', 'green-background-color', 'pink-background-color');
+        logo.classList.add('orange-background-color');
+        logo.classList.remove('blue-border-bottom', 'green-border-bottom', 'pink-border-bottom');
+        logo.classList.add('orange-border-bottom');
+        header.classList.remove('blue-border-right', 'green-border-right', 'pink-border-right');
+        header.classList.add('orange-border-right');
+        mainSvg.classList.add('transparent');
+        mainImage.classList.remove('orange-background-image');
+        mainImage.classList.add('orange-background-image');
+    } else if (chosenColor === '#b1e84a') {
+        logo.classList.remove('blue-background-color', 'orange-background-color', 'pink-background-color');
+        logo.classList.add('green-background-color');
+        logo.classList.remove('blue-border-bottom', 'orange-border-bottom', 'pink-border-bottom');
+        logo.classList.add('green-border-bottom');
+        header.classList.remove('orange-border-right', 'blue-border-right', 'pink-border-right');
+        header.classList.add('green-border-right');
+        mainSvg.classList.add('transparent');
+        mainImage.classList.remove('orange-background-image');
+        mainImage.classList.add('green-background-image');
+    } else if (chosenColor === '#ff87ab') {
+        logo.classList.remove('blue-background-color', 'orange-background-color', 'green-background-color');
+        logo.classList.add('pink-background-color');
+        logo.classList.remove('blue-border-bottom', 'orange-border-bottom', 'green-border-bottom');
+        logo.classList.add('pink-border-bottom');
+        header.classList.remove('orange-border-right', 'blue-border-right', 'green-border-right');
+        header.classList.add('pink-border-right');
+        mainSvg.classList.add('transparent');
+        mainImage.classList.remove('orange-background-image');
+        mainImage.classList.add('pink-background-image');
+
+
+
+
+
+
+        // CONTINUE WITH CHANGING COLORS 
+    }
 };
 
 

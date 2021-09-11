@@ -18,6 +18,9 @@ const aboutText = document.querySelector('.about-text');
 const aboutText2 = document.querySelector('.about-text2');
 const aboutEmail = document.querySelector('.about-email');
 const header = document.querySelector('header');
+const header1 = document.querySelector('header .header');
+const html = document.querySelector('html');
+const body = document.querySelector('body');
 //color variables
 let colorAlertDiv = document.querySelector('.color-alert');
 const color = document.querySelectorAll('.color');
@@ -55,7 +58,7 @@ if (localStorage.getItem('mode') === 'light-mode-active') {
     //change contact me button text color
     contactBtn.classList.toggle('dark-color');
     //change time border color
-    timeBox.classList.toggle('dark-color')
+    timeBox.classList.toggle('dark-color');
     // //change work in progress color
     // workInProgress.classList.toggle('dark-color');
     //change about text color
@@ -67,6 +70,12 @@ if (localStorage.getItem('mode') === 'light-mode-active') {
         aboutText2.classList.toggle('dark-color');
         aboutEmail.classList.toggle('dark-color');
     }
+} else {
+    header.classList.toggle('min-height-100');
+    html.classList.add('min-height-100');
+    //html.classList.add('overflow-hidden');
+    // html.style.height = '100vh';
+    // html.style.overflow = 'hidden';
 }
 
 

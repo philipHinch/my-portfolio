@@ -50,6 +50,12 @@ body {
     #434647,
     #4f5253
   );
+  background-image: repeating-radial-gradient(
+      circle at -1000px -1000px,
+      transparent 0,
+      #383b3c 10px
+    ),
+    repeating-linear-gradient(#232526, #4f5253);
 }
 
 body::after {
@@ -72,12 +78,24 @@ body::after {
 .header {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   justify-content: space-between;
   align-items: center;
   background-color: var(--dark-grey);
   border-right: var(--orange) 2px solid;
   width: 100px;
+}
+
+.min-height-100 {
+  min-height: 100% !important;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.noscroll {
+  overflow: hidden;
 }
 
 /* logo */
@@ -1034,6 +1052,20 @@ section.projects-container {
 }
 
 @media (max-width: 500px) {
+  header {
+    min-height: 120%;
+    justify-content: flex-start !important;
+  }
+
+  .main-nav-bar {
+    margin-top: 20px;
+    margin-bottom: 80px;
+  }
+
+  .light-div {
+    height: 120%;
+  }
+
   section.container {
     margin-bottom: 20px;
   }
@@ -1073,12 +1105,14 @@ section.projects-container {
   /* media about */
 
   .about-container {
+    margin-top: -50px;
+    margin-bottom: -40px;
     width: 80%;
   }
 
   .mode {
-    margin-top: 0px;
-    margin-bottom: 70px;
+    margin-top: -30px;
+    margin-bottom: 10px;
   }
 
   .mode-text {
@@ -1087,7 +1121,7 @@ section.projects-container {
 
   .avatar-container {
     width: 120px;
-    margin-top: 0px;
+    margin-top: 40px;
     margin-bottom: 0px;
   }
 
@@ -1104,7 +1138,7 @@ section.projects-container {
     margin-top: 20px;
     margin-bottom: 10px;
     letter-spacing: 2px;
-    font-size: 0.6rem;
+    font-size: 0.7rem;
   }
 
   .about-text {
@@ -1113,10 +1147,20 @@ section.projects-container {
     font-size: 0.8rem;
   }
 
+  .logos-container {
+    width: 120%;
+    margin-top: 15px;
+    margin-bottom: 2px;
+  }
+
   .logos-container div {
     padding: 2px;
-    width: 30px;
+    width: 20px;
     margin-right: 20px;
+  }
+
+  .logos-container div img {
+    width: 20px;
   }
 
   /* projects */

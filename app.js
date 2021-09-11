@@ -15,6 +15,7 @@ const mainMenuLinks = document.querySelectorAll('.menu-item');
 const mainNavBar = document.querySelector('.main-nav-bar');
 let aboutTextH2 = document.querySelector('.about-text-h2');
 const aboutText = document.querySelector('.about-text');
+const aboutText2 = document.querySelector('.about-text2');
 const aboutEmail = document.querySelector('.about-email');
 const header = document.querySelector('header');
 //color variables
@@ -63,6 +64,7 @@ if (localStorage.getItem('mode') === 'light-mode-active') {
     } else {
         aboutTextH2.classList.toggle('dark-color');
         aboutText.classList.toggle('dark-color');
+        aboutText2.classList.toggle('dark-color');
         aboutEmail.classList.toggle('dark-color');
     }
 }
@@ -100,6 +102,7 @@ toggleMode.addEventListener('click', () => {
     //change about text color
     aboutTextH2.classList.toggle('dark-color');
     aboutText.classList.toggle('dark-color');
+    aboutText2.classList.toggle('dark-color');
     aboutEmail.classList.toggle('dark-color');
 
     //CHANGE BUTTON BACKGROUND ON HOVER IN LIGHT MODE
@@ -122,8 +125,12 @@ color.forEach((color) => {
 
 // update colors on window load
 document.addEventListener('DOMContentLoaded', () => {
-    getColor()
-    setColor()
+    if (localStorage.getItem('color') === null) {
+        localStorage.setItem('color', '#ed8e26');
+    } else {
+        getColor()
+        setColor()
+    }
 });
 
 //FUNCTIONS --------------------------------------------------------------------------------------------

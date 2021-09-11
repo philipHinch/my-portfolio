@@ -1,7 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #ccc;
   box-sizing: border-box;
 }
@@ -256,7 +258,7 @@ section.container .main-image {
 .btn {
   padding: 15px 40px;
   margin-right: -6px;
-  width: 220px;
+  width: 230px;
   font-size: 1.2rem;
   letter-spacing: 1px;
   font-family: inherit;
@@ -447,13 +449,13 @@ ul li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 70%;
+  width: 80%;
   margin-top: 60px;
 }
 
 .avatar-container {
-  width: 280px;
-  margin-bottom: 60px;
+  width: 250px;
+  margin-bottom: 20px;
   overflow: hidden;
 }
 
@@ -469,7 +471,7 @@ ul li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 60px;
+  margin-bottom: 0px;
 }
 
 .about-text-h2 {
@@ -478,12 +480,12 @@ ul li {
 }
 
 .about-text {
-  margin-top: 50px;
+  margin-top: 40px;
   font-size: 1.3rem;
 }
 
 .about-email {
-  margin-top: 40px;
+  margin-top: 20px;
   letter-spacing: 5px;
 }
 
@@ -947,7 +949,7 @@ section.projects-container {
     padding: 15px 20px;
     margin-right: -px;
     margin-top: 40px;
-    width: 160px;
+    width: 170px;
     font-size: 1rem;
     letter-spacing: 1px;
     font-family: inherit;
@@ -984,8 +986,8 @@ section.projects-container {
   }
 
   .avatar-container {
-    width: 200px;
-    margin-bottom: 40px;
+    width: 150px;
+    margin-bottom: 20px;
   }
 
   .about-text-h2 {
@@ -993,8 +995,12 @@ section.projects-container {
   }
 
   .about-text {
-    margin-top: 50px;
-    font-size: 1.1rem;
+    margin-top: 20px;
+    font-size: 1rem;
+  }
+
+  .logos-container div img {
+    width: 30px;
   }
 
   /* projects */
@@ -1058,7 +1064,7 @@ section.projects-container {
   /* media buttons */
 
   .btn {
-    width: 120px;
+    width: 130px;
     padding: 15px 10px;
     margin-bottom: 20px;
     font-size: 0.8rem;
@@ -1068,7 +1074,15 @@ section.projects-container {
 
   .about-container {
     width: 80%;
+  }
+
+  .mode {
     margin-top: 0px;
+    margin-bottom: 70px;
+  }
+
+  .mode-text {
+    font-size: 0.5rem;
   }
 
   .avatar-container {
@@ -1077,21 +1091,26 @@ section.projects-container {
     margin-bottom: 0px;
   }
 
+  .about-text-container {
+    margin-bottom: -10px;
+  }
+
   .about-text-h2 {
     font-size: 1.2rem;
     color: var(--orange);
   }
 
   .about-email {
-    margin-top: 25px;
-    margin-bottom: 18px;
+    margin-top: 20px;
+    margin-bottom: 10px;
     letter-spacing: 2px;
+    font-size: 0.6rem;
   }
 
   .about-text {
     margin-top: 10px;
-    margin-bottom: -60px;
-    font-size: 1rem;
+    margin-bottom: 0px;
+    font-size: 0.8rem;
   }
 
   .logos-container div {

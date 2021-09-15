@@ -1022,7 +1022,7 @@ section.projects-container {
   }
 
   .avatar-container {
-    width: 150px;
+    width: 140px;
     margin-bottom: 20px;
   }
 
@@ -1099,7 +1099,7 @@ section.projects-container {
 @media (max-width: 600px) {
   .avatar-container {
     margin-top: 160px;
-    width: 130px;
+    width: 120px;
   }
 
   section.projects-container {
@@ -1182,7 +1182,7 @@ section.projects-container {
   }
 
   .avatar-container {
-    width: 120px;
+    width: 100px;
     margin-top: 50px;
     margin-bottom: 0px;
   }
@@ -1373,7 +1373,7 @@ section.projects-container {
 @media (max-height: 700px) {
   /* about page */
   .avatar-container {
-    width: 160px;
+    width: 140px;
   }
   .about-text {
     font-size: 1.3rem;
@@ -1411,7 +1411,7 @@ section.projects-container {
   /* about-page */
   .avatar-container {
     margin-bottom: 10px;
-    width: 110px;
+    width: 100px;
   }
   .about-text {
     margin-top: 20px;

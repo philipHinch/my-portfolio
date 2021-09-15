@@ -1018,7 +1018,7 @@ section.projects-container {
 
   .about-container {
     width: 80%;
-    margin-top: 40px;
+    margin-top: 50px;
   }
 
   .avatar-container {
@@ -1167,7 +1167,7 @@ section.projects-container {
   /* media about */
 
   .about-container {
-    margin-top: -50px;
+    margin-top: -40px;
     margin-bottom: 0px;
     width: 80%;
   }
@@ -1486,7 +1486,7 @@ section.projects-container {
   }
   /* about page */
   .about-container {
-    margin-top: 80px;
+    margin-top: 90px;
     width: 97%;
   }
   /* settings page */

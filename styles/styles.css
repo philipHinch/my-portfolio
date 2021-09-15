@@ -926,7 +926,10 @@ section.projects-container {
 /* MAX WIDTH */
 
 @media (max-width: 1100px) {
-  /* projects page */
+  .avatar-container {
+    margin-top: 30px;
+    width: 180px;
+  }
 
   .grid {
     grid-template-columns: repeat(auto-fill, minmax(200px, 100px));

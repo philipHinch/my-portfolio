@@ -1109,7 +1109,7 @@ section.projects-container {
   }
 
   section.projects-container {
-    margin-top: 500px;
+    margin-top: 600px;
   }
 
   .grid {
@@ -1285,7 +1285,7 @@ section.projects-container {
     top: 18%;
     left: 50%;
     transform: translateX(-50%);
-    width: 80%;
+    width: 60%;
     z-index: 4;
     display: none;
   }

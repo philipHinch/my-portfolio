@@ -623,9 +623,15 @@ section.projects-container {
   height: 80%;
 }
 
+.project9-image {
+  background: url("/images/projectimages/worldcontries.png") no-repeat center
+    center/cover;
+  height: 80%;
+}
+
 .github-repo1 {
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translateX(-50%);
   width: 80%;

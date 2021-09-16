@@ -35,9 +35,9 @@ a {
   --white: #ffffff;
 }
 
-html {
+/* html {
   height: 100%;
-}
+} */
 
 body {
   position: relative;
@@ -58,18 +58,21 @@ body {
       #383b3c 10px
     ),
     repeating-linear-gradient(#232526, #4f5253);
+  overflow: auto;
 }
 
 .header {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  justify-content: space-between;
+  min-height: 100%;
+  justify-content: start;
   align-items: center;
   background-color: var(--dark-grey);
   border-right: var(--orange) 2px solid;
   border-bottom: var(--orange) 2px solid;
   width: 100px;
+  position: absolute;
+  z-index: 100;
 }
 
 .min-height-100 {
@@ -123,6 +126,8 @@ svg path {
 .main-nav-bar {
   display: flex;
   flex-direction: column;
+  height: 100%;
+  margin-bottom: 50px;
 }
 
 .main-nav-bar a i {
@@ -137,12 +142,17 @@ svg path {
   color: var(--orange);
 }
 
+.relative {
+  position: relative;
+}
+
 /* secondary-nav-bar */
 
 .secondary-nav-bar {
   display: flex;
   flex-direction: column;
   margin-bottom: 100px;
+  height: 100%;
 }
 
 .secondary-nav-bar a i {
@@ -157,15 +167,17 @@ svg path {
   color: var(--orange);
 }
 
-/* main */
+/* main index*/
 
-main {
+main.index-main {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
+  min-height: 100vh;
+  margin-left: 100px;
 }
 
 /* light div */
@@ -199,13 +211,12 @@ section.container {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  /* border: 2px solid var(--very-light-grey); */
 }
 
 section .main-text {
   position: relative;
   width: 50%;
-  height: 50%;
+  height: 250px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -245,7 +256,7 @@ section.container .main-text h1.ending {
 
 section.container .main-image {
   width: 50%;
-  height: 50%;
+  height: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -258,6 +269,10 @@ section.container .main-image {
 }
 
 /* buttons */
+
+.main-buttons {
+  margin-bottom: 20px;
+}
 
 .btn {
   padding: 15px 40px;
@@ -379,7 +394,7 @@ input:checked + .slider:before {
 /* date */
 
 .date {
-  position: absolute;
+  position: fixed;
   top: 2%;
   right: 3%;
 }
@@ -395,7 +410,7 @@ input:checked + .slider:before {
 /* time */
 
 .time {
-  position: absolute;
+  position: fixed;
   top: 5%;
   right: 3.8%;
   border-radius: 10px;
@@ -449,19 +464,31 @@ ul li {
 
 /* ABOUT PAGE  */
 
-.about-container {
+.about-main {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 90%;
+  width: 100%;
+  min-height: 100vh;
+  margin-left: 100px;
+}
+
+.about-container {
+  display: block;
+  /* flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+  width: 100%;
+  min-height: 100vh;
   margin-top: 100px;
 }
 
 .avatar-container {
+  max-height: 250px;
   width: 250px;
-  margin-bottom: 20px;
-  overflow: hidden;
+  margin: 20px auto;
 }
 
 .avatar-container img {
@@ -474,9 +501,9 @@ ul li {
 .about-text-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  margin-bottom: 0px;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .about-text-h2 {
@@ -499,7 +526,9 @@ ul li {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin: 30px;
+  width: 90%;
+  margin: 50px auto;
+  margin-bottom: 100px;
 }
 
 .logos-container div {
@@ -513,32 +542,43 @@ ul li {
 
 /* PROJECTS PAGE */
 
+.main-projects {
+  display: block;
+  width: 100%;
+  min-height: 100vh;
+  margin-left: 100px;
+}
+
 section.projects-container {
-  width: 80%;
-  margin: 50px 0;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
 }
 
 .project-title {
-  margin: 50px auto;
+  margin: 100px auto;
   font-size: 2rem;
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   gap: 20px;
-  max-width: 100%;
+  margin-bottom: 80px;
 }
 
 .grid .project {
-  aspect-ratio: 1/1;
-  overflow: auto;
-  /* background-color: var(--orange); */
-
+  width: 200px;
+  height: 250px;
   border: 2px solid var(--orange);
   border-radius: 10px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -555,13 +595,19 @@ section.projects-container {
 }
 
 .project-text-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: auto;
+  width: 90%;
 }
 
 .project-text {
   color: var(--dark-grey);
   font-size: 0.9rem;
   font-weight: bold;
+  margin-bottom: 5px;
 }
 
 .project-text-div ul {
@@ -573,60 +619,60 @@ section.projects-container {
 .project0-image {
   background: url("/images/projectimages/pokemon.png") no-repeat center
     center/cover;
-  height: 80%;
+  height: 50%;
 }
 
 .project1-image {
   background: url("/images/projectimages/digitalclockthumb.png") no-repeat
     center center/cover;
-  height: 80%;
+  height: 50%;
 }
 
 .project2-image {
   background: url("/images/projectimages/weather.png") no-repeat center
     center/cover;
-  height: 80%;
+  height: 50%;
 }
 
 .project3-image {
   background: url("/images/projectimages/gym.png") no-repeat center center/cover;
-  height: 80%;
+  height: 50%;
 }
 
 .project4-image {
   background: url("/images/projectimages/shoppinglist.png") no-repeat center
     center/cover;
-  height: 80%;
+  height: 50%;
 }
 
 .project5-image {
   background: url("/images/projectimages/savoury.png") no-repeat center
     center/cover;
-  height: 80%;
+  height: 50%;
 }
 
 .project6-image {
   background: url("/images/projectimages/quizgame.png") no-repeat center
     center/cover;
-  height: 80%;
+  height: 50%;
 }
 
 .project7-image {
   background: url("/images/projectimages/gradientgenerator.png") no-repeat
     center center/cover;
-  height: 80%;
+  height: 50%;
 }
 
 .project8-image {
   background: url("/images/projectimages/coolloginform.png") no-repeat center
     center/cover;
-  height: 80%;
+  height: 50%;
 }
 
 .project9-image {
   background: url("/images/projectimages/worldcontries.png") no-repeat center
     center/cover;
-  height: 80%;
+  height: 50%;
 }
 
 .github-repo1 {
@@ -693,12 +739,23 @@ section.projects-container {
 
 /* SETTINGS PAGE */
 
+.settings-main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  margin-left: 100px;
+}
+
 .settings-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 200px 0;
+  margin: 100px 0;
 }
 
 .color-alert {
@@ -708,7 +765,7 @@ section.projects-container {
 }
 
 .color-selection {
-  margin: 50px 0;
+  margin: 100px 0;
   display: flex;
 }
 
@@ -917,6 +974,17 @@ section.projects-container {
   background-color: transparent;
 }
 
+.display-block {
+  display: block;
+}
+
+.display-flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.centered {
+}
 @keyframes colonBeep {
   0% {
     opacity: 1;
@@ -930,6 +998,12 @@ section.projects-container {
 /* ------------------- MEDIA QUERIES ------------------- */
 
 /* MAX WIDTH */
+
+@media (max-width: 1300px) {
+  section.container .main-text h1 {
+    font-size: 2.6rem;
+  }
+}
 
 @media (max-width: 1100px) {
   .avatar-container {
@@ -947,9 +1021,11 @@ section.projects-container {
     margin-top: 50px;
     flex-direction: column;
     width: 100%;
+    justify-content: center;
   }
   section.container .main-text {
     width: 300px;
+    height: 250px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     border-bottom-left-radius: 0px;
@@ -957,6 +1033,7 @@ section.projects-container {
 
   section.container .main-image {
     width: 300px;
+    height: 250px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     border-top-right-radius: 0px;
@@ -1047,36 +1124,12 @@ section.projects-container {
 
   /* projects */
 
-  section.projects-container {
-    margin-top: 420px;
+  .project-link1 {
+    top: 0%;
   }
 
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 100px));
-    gap: 20px;
-    max-width: 100%;
-    margin-bottom: 0px;
-    margin: auto;
-  }
-
-  .grid .project {
-    aspect-ratio: 1/1;
-    overflow: hidden;
-    background-color: var(--orange);
-    border: 2px solid var(--orange);
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-  }
-
-  .project .project-link1 {
-    top: 0;
-  }
-
-  .project .github-repo1 {
-    display: none;
+  .github-repo1 {
+    top: 40%;
   }
 
   /* settings page */
@@ -1097,26 +1150,9 @@ section.projects-container {
     width: 80px;
     height: 80px;
   }
-  .grid {
-    grid-template-columns: repeat(auto-fill, minmax(120px, 100px));
-  }
 }
 
 @media (max-width: 600px) {
-  .avatar-container {
-    margin-top: 160px;
-    width: 120px;
-  }
-
-  section.projects-container {
-    margin-top: 600px;
-  }
-
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 100px));
-    margin: auto;
-  }
 }
 
 @media (max-width: 500px) {
@@ -1125,14 +1161,14 @@ section.projects-container {
     justify-content: flex-start !important;
   } */
 
-  .main-nav-bar {
+  /* .main-nav-bar {
     margin-top: 20px;
     margin-bottom: 80px;
   }
 
   .light-div {
     height: 120%;
-  }
+  } */
 
   section.container {
     margin-bottom: 20px;
@@ -1216,9 +1252,7 @@ section.projects-container {
   }
 
   .logos-container {
-    width: 120%;
-    margin-top: 15px;
-    margin-bottom: 2px;
+    margin-bottom: 40px;
   }
 
   .logos-container div {
@@ -1233,78 +1267,9 @@ section.projects-container {
 
   /* projects */
 
-  section.projects-container {
-    margin: -50px 0 30px;
+  .go-to-top {
+    display: block;
   }
-
-  .project-title {
-    margin-top: 40px;
-    margin-bottom: 20px;
-    font-size: 1.5rem;
-  }
-
-  .project-text {
-    padding: 3px;
-    font-weight: bold;
-  }
-
-  .project small {
-    font-size: 0.8rem;
-  }
-
-  section.projects-container {
-    margin-top: 900px;
-  }
-
-  .grid {
-    grid-template-columns: repeat(auto-fill, minmax(100px, 100px));
-    gap: 10px;
-    max-width: 100%;
-    margin-bottom: -50px;
-  }
-
-  .grid .project {
-    aspect-ratio: 1/1;
-    overflow: hidden;
-    background-color: var(--orange);
-    border: 2px solid var(--orange);
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-  }
-
-  .grid .project a {
-    padding: 10px 15px;
-    width: 100px;
-    font-size: 0.7rem;
-    font-family: inherit;
-  }
-
-  .github-repo1 {
-    top: 18%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60%;
-    z-index: 4;
-    display: none;
-  }
-
-  .project-link1 {
-    top: 0%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    z-index: 4;
-  }
-
-  /* small {
-    display: none;
-  }
-
-  ul li {
-    display: none;
-  } */
 
   /* color */
 
@@ -1313,195 +1278,28 @@ section.projects-container {
   }
 
   .settings-title {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .color1 {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
   }
 
   .color2 {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
   }
 
   .color3 {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
   }
 
   .color4 {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
   }
 }
 
 /* MAX HEIGHT */
-
-@media (max-height: 1100px) {
-  /* projects page */
-  .grid {
-    grid-template-columns: repeat(auto-fill, minmax(180px, 100px));
-  }
-}
-@media (max-height: 900px) {
-  .grid {
-    grid-template-columns: repeat(auto-fill, minmax(160px, 100px));
-  }
-}
-@media (max-height: 800px) {
-  /* index page */
-  section.container .main-text h1 {
-    font-size: 2.2rem;
-  }
-  .main-image svg {
-    width: 300px;
-  }
-  /* settings page */
-  section.settings-container {
-    margin: 100px auto;
-  }
-  /* projects page */
-  .project-title {
-    margin: 10px auto 20px;
-  }
-  .grid {
-    grid-template-columns: repeat(auto-fill, minmax(140px, 100px));
-  }
-  .project-text-div ul {
-    display: none;
-  }
-  .github-repo1 {
-    display: none;
-  }
-}
-@media (max-height: 700px) {
-  /* about page */
-  .avatar-container {
-    width: 140px;
-  }
-  .about-text {
-    font-size: 1.3rem;
-  }
-  .about-text2 {
-    margin-top: 25px;
-  }
-  .main-nav-bar {
-    margin-bottom: 20px;
-  }
-  .main-nav-bar a i {
-    font-size: 1.4rem;
-  }
-  .secondary-nav-bar a i {
-    font-size: 1.2rem;
-  }
-}
-@media (max-height: 600px) {
-  /* index page */
-  section.container .main-text h1 {
-    font-size: 2rem;
-  }
-  .main-image svg {
-    width: 300px;
-  }
-  .main-nav-bar {
-    margin-bottom: 10px;
-  }
-  .main-nav-bar a i {
-    margin: 10px;
-  }
-  .secondary-nav-bar a i {
-    margin: 7px;
-  }
-  /* about-page */
-  .avatar-container {
-    margin-bottom: 10px;
-    width: 100px;
-  }
-  .about-text {
-    margin-top: 20px;
-    font-size: 1.2rem;
-  }
-  /* settings page */
-  section.settings-container {
-    margin: 50px auto;
-  }
-  /* projects page */
-
-  .grid {
-    grid-template-columns: repeat(auto-fill, minmax(120px, 100px));
-  }
-  .project-text-div {
-  }
-  .project-text {
-    font-size: 0.8rem;
-  }
-}
-@media (max-height: 500px) {
-  /* index-page */
-  .main-nav-bar a i {
-    font-size: 1.5rem;
-    margin: 5px;
-  }
-  .main-nav-bar {
-    margin-bottom: 5px;
-  }
-  .secondary-nav-bar a i {
-    font-size: 1.4rem;
-    margin: 5px;
-  }
-  /* about page */
-  .about-text {
-    font-size: 1rem;
-  }
-  .logos-container {
-    margin: 15px;
-  }
-  .logos-container div {
-    width: 40px;
-  }
-  /* settings page */
-  section.settings-container {
-    margin: 10px auto;
-  }
-  /* projects page */
-
-  .grid {
-    grid-template-columns: repeat(auto-fill, minmax(120px, 100px));
-  }
-}
-@media (max-height: 400px) {
-  /* index page */
-  section.container .main-text h1 {
-    font-size: 1.5rem;
-  }
-  .main-image svg {
-    width: 200px;
-  }
-  .main-nav-bar a i {
-    font-size: 1.3rem;
-    margin: 5px;
-  }
-  .main-nav-bar {
-    margin-bottom: 5px;
-  }
-  .secondary-nav-bar a i {
-    font-size: 1.2rem;
-    margin: 5px;
-  }
-  /* about page */
-  .about-container {
-    margin-top: 90px;
-    width: 97%;
-  }
-  /* settings page */
-  .color1,
-  .color2,
-  .color3,
-  .color4 {
-    width: 100px;
-    height: 100px;
-  }
-  /* projects page */
-}

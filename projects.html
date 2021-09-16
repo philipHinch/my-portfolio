@@ -11,6 +11,8 @@
     <title>My Portfolio</title>
 </head>
 <body>
+    <div class="light-div">
+    </div>
     <span class="work-in-progress"><i class="fas fa-cogs"></i>Webpage
         <br> Work In Progress...</span>
     <header class="header">
@@ -33,21 +35,21 @@
             <a href="https://codepen.io/neo90sr" class="menu-item" target="_blank"><i class="fab fa-codepen" title="Codepen"></i></a>
         </nav>
     </header>
-    <main>
-        <div class="light-div">
-        </div>
+    <main class="main-projects">
+        <!-- <div class="light-div">
+        </div> -->
         <div class="date">
         </div>
         <div class="time">
         </div>
-        <div class="mode">
-            <p class="mode-text">Dark | Light Mode</p>
-            <label class="switch">
-                <input type="checkbox" id="toggle-mode">
-                <span class="slider round"></span>
-            </label>
-        </div>
         <section class="projects-container">
+            <div class="mode">
+                <p class="mode-text">Dark | Light Mode</p>
+                <label class="switch">
+                    <input type="checkbox" id="toggle-mode">
+                    <span class="slider round"></span>
+                </label>
+            </div>
             <h2 class="project-title active">My Projects</h2>
             <div class="grid">
                 <div class="project">
@@ -59,7 +61,8 @@
                     <div class="project-text-div">
                         <p class="project-text">World Countries</p>
                         <ul>
-                            <li><small>Async/Await, Fetch API</small></li>
+                            <li><small>Async/Await</small></li><li><small>Fetch API</small></li><li><small>Event Listeners</small></li>
+                            <li><small>DOM Manipulation</small></li>
                         </ul>
                     </div>
                 </div>
@@ -72,7 +75,7 @@
                     <div class="project-text-div">
                         <p class="project-text">Pokemon Cards</p>
                         <ul>
-                            <li><small>Async/Await, Fetch API</small></li>
+                            <li><small>Async/Await, Fetch API, Event Listeners, DOM Manipulation</small></li>
                         </ul>
                     </div>
                 </div>
@@ -181,11 +184,11 @@
                     </div>
                 </div>
             </div>
+            <div class="main-buttons">
+                <button class="btn view-projects-btn" onclick="location.href='/projects.html'" type="button">View Projects</button>
+                <button class="btn contact-me-btn" onclick="location.href='mailto:philip.hinchsliff@yahoo.com';">Contact Me</button>
+            </div>
         </section>
-        <div class="main-buttons">
-            <button class="btn view-projects-btn" onclick="location.href='/projects.html'" type="button">View Projects</button>
-            <button class="btn contact-me-btn" onclick="location.href='mailto:philip.hinchsliff@yahoo.com';">Contact Me</button>
-        </div>
     </main>
     <script src="/app.js"></script>
 </body>

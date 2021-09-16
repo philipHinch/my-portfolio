@@ -40,14 +40,14 @@
         </div>
         <div class="time">
         </div>
-        <div class="mode">
-            <p class="mode-text">Dark | Light Mode</p>
-            <label class="switch">
-                <input type="checkbox" id="toggle-mode">
-                <span class="slider round"></span>
-            </label>
-        </div>
         <section class="settings-container">
+            <div class="mode">
+                <p class="mode-text">Dark | Light Mode</p>
+                <label class="switch">
+                    <input type="checkbox" id="toggle-mode">
+                    <span class="slider round"></span>
+                </label>
+            </div>
             <h2 class="settings-title active">Choose Portfolio Main Color</h2>
             <form class="color-selection">
                 <a href="#"><div class="color1 color">#ed8e26</div></a>
@@ -56,11 +56,11 @@
                 <a href="#"><div class="color4 color">#ff87ab</div></a>
             </form>
 
+            <div class="main-buttons">
+                <button class="btn view-projects-btn" onclick="location.href='/projects.html'" type="button">View Projects</button>
+                <button class="btn contact-me-btn" onclick="location.href='mailto:philip.hinchsliff@yahoo.com';">Contact Me</button>
+            </div>
         </section>
-        <div class="main-buttons">
-            <button class="btn view-projects-btn" onclick="location.href='/projects.html'" type="button">View Projects</button>
-            <button class="btn contact-me-btn" onclick="location.href='mailto:philip.hinchsliff@yahoo.com';">Contact Me</button>
-        </div>
     </main>
     <script src="/app.js"></script>
 </body>

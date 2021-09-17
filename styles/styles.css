@@ -8,20 +8,6 @@
   box-sizing: border-box;
 }
 
-/* work-in-progress */
-
-.work-in-progress {
-  position: absolute;
-  bottom: 10px;
-  left: 5px;
-  font-size: 0.6rem;
-}
-
-.work-in-progress i {
-  margin-right: 5px;
-  color: var(--very-light-grey);
-}
-
 a {
   text-decoration: none;
 }
@@ -33,10 +19,6 @@ a {
   --very-light-grey: #ccc;
   --orange: #ed8e26;
   --white: #ffffff;
-}
-
-html {
-  overflow: ;
 }
 
 body {

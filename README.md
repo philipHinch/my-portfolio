@@ -4,7 +4,7 @@ This is my portfolio.
 
 It is now fully responsive and there are some nice little features within the pages.
 
-In the portfolio you can: **TOGGLE LIGHT & DARK MODE**, **CHECK REAL TIME AND DATE**, **CHANGE MAIN PORTFOLIO COLOR (4 COLORS TO CHOOSE FROM)**
+In the portfolio you can: **Toggle light & dark mode**, **Check real time and date**, **Change main portfolio color (4 colors to choose from)**
 
 ---
 

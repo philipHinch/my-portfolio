@@ -634,14 +634,14 @@ section.projects-container {
 }
 
 .project6-image {
-  background: url("/images/projectimages/quizgame.png") no-repeat center
+  background: url("/images/projectimages/philsrecipes.png") no-repeat center
     center/cover;
   height: 50%;
 }
 
 .project7-image {
-  background: url("/images/projectimages/gradientgenerator.png") no-repeat
-    center center/cover;
+  background: url("/images/projectimages/solar.png") no-repeat center
+    center/cover;
   height: 50%;
 }
 

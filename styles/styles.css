@@ -681,6 +681,12 @@ section.projects-container {
   height: 50%;
 }
 
+.project14-image {
+  background: url("/images/projectimages/cinemix.png") no-repeat center
+    center/cover;
+  height: 50%;
+}
+
 .github-repo1 {
   position: absolute;
   top: 60%;

@@ -8,7 +8,7 @@ In the portfolio you can: **Toggle light & dark mode**, **Check real time and da
 
 ![This is an image](https://raw.githubusercontent.com/philipHinch/underline/main/underline.png)
 
-The technologies used:
+### The technologies used:
 
 * HTML
 * CSS

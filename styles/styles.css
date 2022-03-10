@@ -269,7 +269,19 @@ section.container .main-image {
   cursor: pointer;
   transition: background-color 0.2s ease-in;
 }
-
+.newPortfolioBtn {
+  border-radius: 10px;
+  font-size: 1rem;
+  text-align: center;
+  padding: 20px;
+  background-color: var(--orange);
+  background-color: transparent;
+  color: var(--very-light-grey);
+}
+.newPortfolioBtn:hover {
+  color: var(--dark-grey);
+  background-color: var(--very-light-grey);
+}
 .view-projects-btn {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
